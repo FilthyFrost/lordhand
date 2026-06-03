@@ -1,0 +1,1272 @@
+{
+  "regions": [
+    {
+      "cx": 0,
+      "cz": 3,
+      "mesh": "r_0_3.mesh.bin",
+      "edges": "r_0_3.edges.bin",
+      "boxes": 1
+    },
+    {
+      "cx": 0,
+      "cz": 7,
+      "mesh": "r_0_7.mesh.bin",
+      "edges": "r_0_7.edges.bin",
+      "boxes": 21
+    },
+    {
+      "cx": 0,
+      "cz": 8,
+      "mesh": "r_0_8.mesh.bin",
+      "edges": "r_0_8.edges.bin",
+      "boxes": 1887
+    },
+    {
+      "cx": 0,
+      "cz": 9,
+      "mesh": "r_0_9.mesh.bin",
+      "edges": "r_0_9.edges.bin",
+      "boxes": 5491
+    },
+    {
+      "cx": 0,
+      "cz": 10,
+      "mesh": "r_0_10.mesh.bin",
+      "edges": "r_0_10.edges.bin",
+      "boxes": 7299
+    },
+    {
+      "cx": 0,
+      "cz": 11,
+      "mesh": "r_0_11.mesh.bin",
+      "edges": "r_0_11.edges.bin",
+      "boxes": 4539
+    },
+    {
+      "cx": 0,
+      "cz": 12,
+      "mesh": "r_0_12.mesh.bin",
+      "edges": "r_0_12.edges.bin",
+      "boxes": 3891
+    },
+    {
+      "cx": 0,
+      "cz": 13,
+      "mesh": "r_0_13.mesh.bin",
+      "edges": "r_0_13.edges.bin",
+      "boxes": 995
+    },
+    {
+      "cx": 1,
+      "cz": 6,
+      "mesh": "r_1_6.mesh.bin",
+      "edges": "r_1_6.edges.bin",
+      "boxes": 47
+    },
+    {
+      "cx": 1,
+      "cz": 7,
+      "mesh": "r_1_7.mesh.bin",
+      "edges": "r_1_7.edges.bin",
+      "boxes": 4831
+    },
+    {
+      "cx": 1,
+      "cz": 8,
+      "mesh": "r_1_8.mesh.bin",
+      "edges": "r_1_8.edges.bin",
+      "boxes": 6080
+    },
+    {
+      "cx": 1,
+      "cz": 9,
+      "mesh": "r_1_9.mesh.bin",
+      "edges": "r_1_9.edges.bin",
+      "boxes": 2102
+    },
+    {
+      "cx": 1,
+      "cz": 10,
+      "mesh": "r_1_10.mesh.bin",
+      "edges": "r_1_10.edges.bin",
+      "boxes": 2101
+    },
+    {
+      "cx": 1,
+      "cz": 11,
+      "mesh": "r_1_11.mesh.bin",
+      "edges": "r_1_11.edges.bin",
+      "boxes": 704
+    },
+    {
+      "cx": 1,
+      "cz": 12,
+      "mesh": "r_1_12.mesh.bin",
+      "edges": "r_1_12.edges.bin",
+      "boxes": 3365
+    },
+    {
+      "cx": 1,
+      "cz": 13,
+      "mesh": "r_1_13.mesh.bin",
+      "edges": "r_1_13.edges.bin",
+      "boxes": 3591
+    },
+    {
+      "cx": 1,
+      "cz": 15,
+      "mesh": "r_1_15.mesh.bin",
+      "edges": "r_1_15.edges.bin",
+      "boxes": 85
+    },
+    {
+      "cx": 1,
+      "cz": 16,
+      "mesh": "r_1_16.mesh.bin",
+      "edges": "r_1_16.edges.bin",
+      "boxes": 93
+    },
+    {
+      "cx": 2,
+      "cz": 4,
+      "mesh": "r_2_4.mesh.bin",
+      "edges": "r_2_4.edges.bin",
+      "boxes": 3338
+    },
+    {
+      "cx": 2,
+      "cz": 5,
+      "mesh": "r_2_5.mesh.bin",
+      "edges": "r_2_5.edges.bin",
+      "boxes": 2041
+    },
+    {
+      "cx": 2,
+      "cz": 6,
+      "mesh": "r_2_6.mesh.bin",
+      "edges": "r_2_6.edges.bin",
+      "boxes": 3572
+    },
+    {
+      "cx": 2,
+      "cz": 7,
+      "mesh": "r_2_7.mesh.bin",
+      "edges": "r_2_7.edges.bin",
+      "boxes": 5528
+    },
+    {
+      "cx": 2,
+      "cz": 8,
+      "mesh": "r_2_8.mesh.bin",
+      "edges": "r_2_8.edges.bin",
+      "boxes": 1653
+    },
+    {
+      "cx": 2,
+      "cz": 9,
+      "mesh": "r_2_9.mesh.bin",
+      "edges": "r_2_9.edges.bin",
+      "boxes": 1500
+    },
+    {
+      "cx": 2,
+      "cz": 10,
+      "mesh": "r_2_10.mesh.bin",
+      "edges": "r_2_10.edges.bin",
+      "boxes": 1673
+    },
+    {
+      "cx": 2,
+      "cz": 11,
+      "mesh": "r_2_11.mesh.bin",
+      "edges": "r_2_11.edges.bin",
+      "boxes": 682
+    },
+    {
+      "cx": 2,
+      "cz": 12,
+      "mesh": "r_2_12.mesh.bin",
+      "edges": "r_2_12.edges.bin",
+      "boxes": 665
+    },
+    {
+      "cx": 2,
+      "cz": 13,
+      "mesh": "r_2_13.mesh.bin",
+      "edges": "r_2_13.edges.bin",
+      "boxes": 271
+    },
+    {
+      "cx": 2,
+      "cz": 14,
+      "mesh": "r_2_14.mesh.bin",
+      "edges": "r_2_14.edges.bin",
+      "boxes": 741
+    },
+    {
+      "cx": 2,
+      "cz": 15,
+      "mesh": "r_2_15.mesh.bin",
+      "edges": "r_2_15.edges.bin",
+      "boxes": 3000
+    },
+    {
+      "cx": 2,
+      "cz": 16,
+      "mesh": "r_2_16.mesh.bin",
+      "edges": "r_2_16.edges.bin",
+      "boxes": 2635
+    },
+    {
+      "cx": 2,
+      "cz": 17,
+      "mesh": "r_2_17.mesh.bin",
+      "edges": "r_2_17.edges.bin",
+      "boxes": 1365
+    },
+    {
+      "cx": 2,
+      "cz": 18,
+      "mesh": "r_2_18.mesh.bin",
+      "edges": "r_2_18.edges.bin",
+      "boxes": 65
+    },
+    {
+      "cx": 3,
+      "cz": 3,
+      "mesh": "r_3_3.mesh.bin",
+      "edges": "r_3_3.edges.bin",
+      "boxes": 402
+    },
+    {
+      "cx": 3,
+      "cz": 4,
+      "mesh": "r_3_4.mesh.bin",
+      "edges": "r_3_4.edges.bin",
+      "boxes": 3582
+    },
+    {
+      "cx": 3,
+      "cz": 5,
+      "mesh": "r_3_5.mesh.bin",
+      "edges": "r_3_5.edges.bin",
+      "boxes": 6077
+    },
+    {
+      "cx": 3,
+      "cz": 6,
+      "mesh": "r_3_6.mesh.bin",
+      "edges": "r_3_6.edges.bin",
+      "boxes": 5059
+    },
+    {
+      "cx": 3,
+      "cz": 7,
+      "mesh": "r_3_7.mesh.bin",
+      "edges": "r_3_7.edges.bin",
+      "boxes": 4890
+    },
+    {
+      "cx": 3,
+      "cz": 8,
+      "mesh": "r_3_8.mesh.bin",
+      "edges": "r_3_8.edges.bin",
+      "boxes": 6096
+    },
+    {
+      "cx": 3,
+      "cz": 9,
+      "mesh": "r_3_9.mesh.bin",
+      "edges": "r_3_9.edges.bin",
+      "boxes": 7931
+    },
+    {
+      "cx": 3,
+      "cz": 10,
+      "mesh": "r_3_10.mesh.bin",
+      "edges": "r_3_10.edges.bin",
+      "boxes": 4174
+    },
+    {
+      "cx": 3,
+      "cz": 11,
+      "mesh": "r_3_11.mesh.bin",
+      "edges": "r_3_11.edges.bin",
+      "boxes": 1579
+    },
+    {
+      "cx": 3,
+      "cz": 12,
+      "mesh": "r_3_12.mesh.bin",
+      "edges": "r_3_12.edges.bin",
+      "boxes": 1007
+    },
+    {
+      "cx": 3,
+      "cz": 13,
+      "mesh": "r_3_13.mesh.bin",
+      "edges": "r_3_13.edges.bin",
+      "boxes": 612
+    },
+    {
+      "cx": 3,
+      "cz": 14,
+      "mesh": "r_3_14.mesh.bin",
+      "edges": "r_3_14.edges.bin",
+      "boxes": 269
+    },
+    {
+      "cx": 3,
+      "cz": 15,
+      "mesh": "r_3_15.mesh.bin",
+      "edges": "r_3_15.edges.bin",
+      "boxes": 1721
+    },
+    {
+      "cx": 3,
+      "cz": 16,
+      "mesh": "r_3_16.mesh.bin",
+      "edges": "r_3_16.edges.bin",
+      "boxes": 4264
+    },
+    {
+      "cx": 3,
+      "cz": 17,
+      "mesh": "r_3_17.mesh.bin",
+      "edges": "r_3_17.edges.bin",
+      "boxes": 1148
+    },
+    {
+      "cx": 3,
+      "cz": 18,
+      "mesh": "r_3_18.mesh.bin",
+      "edges": "r_3_18.edges.bin",
+      "boxes": 1193
+    },
+    {
+      "cx": 3,
+      "cz": 19,
+      "mesh": "r_3_19.mesh.bin",
+      "edges": "r_3_19.edges.bin",
+      "boxes": 114
+    },
+    {
+      "cx": 4,
+      "cz": 0,
+      "mesh": "r_4_0.mesh.bin",
+      "edges": "r_4_0.edges.bin",
+      "boxes": 105
+    },
+    {
+      "cx": 4,
+      "cz": 1,
+      "mesh": "r_4_1.mesh.bin",
+      "edges": "r_4_1.edges.bin",
+      "boxes": 285
+    },
+    {
+      "cx": 4,
+      "cz": 2,
+      "mesh": "r_4_2.mesh.bin",
+      "edges": "r_4_2.edges.bin",
+      "boxes": 330
+    },
+    {
+      "cx": 4,
+      "cz": 3,
+      "mesh": "r_4_3.mesh.bin",
+      "edges": "r_4_3.edges.bin",
+      "boxes": 7170
+    },
+    {
+      "cx": 4,
+      "cz": 4,
+      "mesh": "r_4_4.mesh.bin",
+      "edges": "r_4_4.edges.bin",
+      "boxes": 8176
+    },
+    {
+      "cx": 4,
+      "cz": 5,
+      "mesh": "r_4_5.mesh.bin",
+      "edges": "r_4_5.edges.bin",
+      "boxes": 7697
+    },
+    {
+      "cx": 4,
+      "cz": 6,
+      "mesh": "r_4_6.mesh.bin",
+      "edges": "r_4_6.edges.bin",
+      "boxes": 7628
+    },
+    {
+      "cx": 4,
+      "cz": 7,
+      "mesh": "r_4_7.mesh.bin",
+      "edges": "r_4_7.edges.bin",
+      "boxes": 8325
+    },
+    {
+      "cx": 4,
+      "cz": 8,
+      "mesh": "r_4_8.mesh.bin",
+      "edges": "r_4_8.edges.bin",
+      "boxes": 10946
+    },
+    {
+      "cx": 4,
+      "cz": 9,
+      "mesh": "r_4_9.mesh.bin",
+      "edges": "r_4_9.edges.bin",
+      "boxes": 15353
+    },
+    {
+      "cx": 4,
+      "cz": 10,
+      "mesh": "r_4_10.mesh.bin",
+      "edges": "r_4_10.edges.bin",
+      "boxes": 7086
+    },
+    {
+      "cx": 4,
+      "cz": 11,
+      "mesh": "r_4_11.mesh.bin",
+      "edges": "r_4_11.edges.bin",
+      "boxes": 3363
+    },
+    {
+      "cx": 4,
+      "cz": 12,
+      "mesh": "r_4_12.mesh.bin",
+      "edges": "r_4_12.edges.bin",
+      "boxes": 6663
+    },
+    {
+      "cx": 4,
+      "cz": 13,
+      "mesh": "r_4_13.mesh.bin",
+      "edges": "r_4_13.edges.bin",
+      "boxes": 1493
+    },
+    {
+      "cx": 4,
+      "cz": 14,
+      "mesh": "r_4_14.mesh.bin",
+      "edges": "r_4_14.edges.bin",
+      "boxes": 3835
+    },
+    {
+      "cx": 4,
+      "cz": 15,
+      "mesh": "r_4_15.mesh.bin",
+      "edges": "r_4_15.edges.bin",
+      "boxes": 8077
+    },
+    {
+      "cx": 4,
+      "cz": 16,
+      "mesh": "r_4_16.mesh.bin",
+      "edges": "r_4_16.edges.bin",
+      "boxes": 4527
+    },
+    {
+      "cx": 4,
+      "cz": 17,
+      "mesh": "r_4_17.mesh.bin",
+      "edges": "r_4_17.edges.bin",
+      "boxes": 463
+    },
+    {
+      "cx": 4,
+      "cz": 18,
+      "mesh": "r_4_18.mesh.bin",
+      "edges": "r_4_18.edges.bin",
+      "boxes": 9888
+    },
+    {
+      "cx": 4,
+      "cz": 19,
+      "mesh": "r_4_19.mesh.bin",
+      "edges": "r_4_19.edges.bin",
+      "boxes": 842
+    },
+    {
+      "cx": 5,
+      "cz": 0,
+      "mesh": "r_5_0.mesh.bin",
+      "edges": "r_5_0.edges.bin",
+      "boxes": 285
+    },
+    {
+      "cx": 5,
+      "cz": 1,
+      "mesh": "r_5_1.mesh.bin",
+      "edges": "r_5_1.edges.bin",
+      "boxes": 7272
+    },
+    {
+      "cx": 5,
+      "cz": 2,
+      "mesh": "r_5_2.mesh.bin",
+      "edges": "r_5_2.edges.bin",
+      "boxes": 9429
+    },
+    {
+      "cx": 5,
+      "cz": 3,
+      "mesh": "r_5_3.mesh.bin",
+      "edges": "r_5_3.edges.bin",
+      "boxes": 2261
+    },
+    {
+      "cx": 5,
+      "cz": 4,
+      "mesh": "r_5_4.mesh.bin",
+      "edges": "r_5_4.edges.bin",
+      "boxes": 6933
+    },
+    {
+      "cx": 5,
+      "cz": 5,
+      "mesh": "r_5_5.mesh.bin",
+      "edges": "r_5_5.edges.bin",
+      "boxes": 8169
+    },
+    {
+      "cx": 5,
+      "cz": 6,
+      "mesh": "r_5_6.mesh.bin",
+      "edges": "r_5_6.edges.bin",
+      "boxes": 10246
+    },
+    {
+      "cx": 5,
+      "cz": 7,
+      "mesh": "r_5_7.mesh.bin",
+      "edges": "r_5_7.edges.bin",
+      "boxes": 11858
+    },
+    {
+      "cx": 5,
+      "cz": 8,
+      "mesh": "r_5_8.mesh.bin",
+      "edges": "r_5_8.edges.bin",
+      "boxes": 10323
+    },
+    {
+      "cx": 5,
+      "cz": 9,
+      "mesh": "r_5_9.mesh.bin",
+      "edges": "r_5_9.edges.bin",
+      "boxes": 5697
+    },
+    {
+      "cx": 5,
+      "cz": 10,
+      "mesh": "r_5_10.mesh.bin",
+      "edges": "r_5_10.edges.bin",
+      "boxes": 5652
+    },
+    {
+      "cx": 5,
+      "cz": 11,
+      "mesh": "r_5_11.mesh.bin",
+      "edges": "r_5_11.edges.bin",
+      "boxes": 5535
+    },
+    {
+      "cx": 5,
+      "cz": 12,
+      "mesh": "r_5_12.mesh.bin",
+      "edges": "r_5_12.edges.bin",
+      "boxes": 7249
+    },
+    {
+      "cx": 5,
+      "cz": 13,
+      "mesh": "r_5_13.mesh.bin",
+      "edges": "r_5_13.edges.bin",
+      "boxes": 4609
+    },
+    {
+      "cx": 5,
+      "cz": 14,
+      "mesh": "r_5_14.mesh.bin",
+      "edges": "r_5_14.edges.bin",
+      "boxes": 4655
+    },
+    {
+      "cx": 5,
+      "cz": 15,
+      "mesh": "r_5_15.mesh.bin",
+      "edges": "r_5_15.edges.bin",
+      "boxes": 5970
+    },
+    {
+      "cx": 5,
+      "cz": 16,
+      "mesh": "r_5_16.mesh.bin",
+      "edges": "r_5_16.edges.bin",
+      "boxes": 6846
+    },
+    {
+      "cx": 5,
+      "cz": 17,
+      "mesh": "r_5_17.mesh.bin",
+      "edges": "r_5_17.edges.bin",
+      "boxes": 1116
+    },
+    {
+      "cx": 5,
+      "cz": 18,
+      "mesh": "r_5_18.mesh.bin",
+      "edges": "r_5_18.edges.bin",
+      "boxes": 1150
+    },
+    {
+      "cx": 5,
+      "cz": 19,
+      "mesh": "r_5_19.mesh.bin",
+      "edges": "r_5_19.edges.bin",
+      "boxes": 881
+    },
+    {
+      "cx": 6,
+      "cz": 0,
+      "mesh": "r_6_0.mesh.bin",
+      "edges": "r_6_0.edges.bin",
+      "boxes": 282
+    },
+    {
+      "cx": 6,
+      "cz": 1,
+      "mesh": "r_6_1.mesh.bin",
+      "edges": "r_6_1.edges.bin",
+      "boxes": 8565
+    },
+    {
+      "cx": 6,
+      "cz": 2,
+      "mesh": "r_6_2.mesh.bin",
+      "edges": "r_6_2.edges.bin",
+      "boxes": 9633
+    },
+    {
+      "cx": 6,
+      "cz": 3,
+      "mesh": "r_6_3.mesh.bin",
+      "edges": "r_6_3.edges.bin",
+      "boxes": 2359
+    },
+    {
+      "cx": 6,
+      "cz": 4,
+      "mesh": "r_6_4.mesh.bin",
+      "edges": "r_6_4.edges.bin",
+      "boxes": 7286
+    },
+    {
+      "cx": 6,
+      "cz": 5,
+      "mesh": "r_6_5.mesh.bin",
+      "edges": "r_6_5.edges.bin",
+      "boxes": 7773
+    },
+    {
+      "cx": 6,
+      "cz": 6,
+      "mesh": "r_6_6.mesh.bin",
+      "edges": "r_6_6.edges.bin",
+      "boxes": 9377
+    },
+    {
+      "cx": 6,
+      "cz": 7,
+      "mesh": "r_6_7.mesh.bin",
+      "edges": "r_6_7.edges.bin",
+      "boxes": 11709
+    },
+    {
+      "cx": 6,
+      "cz": 8,
+      "mesh": "r_6_8.mesh.bin",
+      "edges": "r_6_8.edges.bin",
+      "boxes": 10411
+    },
+    {
+      "cx": 6,
+      "cz": 9,
+      "mesh": "r_6_9.mesh.bin",
+      "edges": "r_6_9.edges.bin",
+      "boxes": 5145
+    },
+    {
+      "cx": 6,
+      "cz": 10,
+      "mesh": "r_6_10.mesh.bin",
+      "edges": "r_6_10.edges.bin",
+      "boxes": 5593
+    },
+    {
+      "cx": 6,
+      "cz": 11,
+      "mesh": "r_6_11.mesh.bin",
+      "edges": "r_6_11.edges.bin",
+      "boxes": 4998
+    },
+    {
+      "cx": 6,
+      "cz": 12,
+      "mesh": "r_6_12.mesh.bin",
+      "edges": "r_6_12.edges.bin",
+      "boxes": 7627
+    },
+    {
+      "cx": 6,
+      "cz": 13,
+      "mesh": "r_6_13.mesh.bin",
+      "edges": "r_6_13.edges.bin",
+      "boxes": 4587
+    },
+    {
+      "cx": 6,
+      "cz": 14,
+      "mesh": "r_6_14.mesh.bin",
+      "edges": "r_6_14.edges.bin",
+      "boxes": 3222
+    },
+    {
+      "cx": 6,
+      "cz": 15,
+      "mesh": "r_6_15.mesh.bin",
+      "edges": "r_6_15.edges.bin",
+      "boxes": 5854
+    },
+    {
+      "cx": 6,
+      "cz": 16,
+      "mesh": "r_6_16.mesh.bin",
+      "edges": "r_6_16.edges.bin",
+      "boxes": 6788
+    },
+    {
+      "cx": 6,
+      "cz": 17,
+      "mesh": "r_6_17.mesh.bin",
+      "edges": "r_6_17.edges.bin",
+      "boxes": 1246
+    },
+    {
+      "cx": 6,
+      "cz": 18,
+      "mesh": "r_6_18.mesh.bin",
+      "edges": "r_6_18.edges.bin",
+      "boxes": 1235
+    },
+    {
+      "cx": 6,
+      "cz": 19,
+      "mesh": "r_6_19.mesh.bin",
+      "edges": "r_6_19.edges.bin",
+      "boxes": 883
+    },
+    {
+      "cx": 7,
+      "cz": 0,
+      "mesh": "r_7_0.mesh.bin",
+      "edges": "r_7_0.edges.bin",
+      "boxes": 153
+    },
+    {
+      "cx": 7,
+      "cz": 1,
+      "mesh": "r_7_1.mesh.bin",
+      "edges": "r_7_1.edges.bin",
+      "boxes": 386
+    },
+    {
+      "cx": 7,
+      "cz": 2,
+      "mesh": "r_7_2.mesh.bin",
+      "edges": "r_7_2.edges.bin",
+      "boxes": 530
+    },
+    {
+      "cx": 7,
+      "cz": 3,
+      "mesh": "r_7_3.mesh.bin",
+      "edges": "r_7_3.edges.bin",
+      "boxes": 5715
+    },
+    {
+      "cx": 7,
+      "cz": 4,
+      "mesh": "r_7_4.mesh.bin",
+      "edges": "r_7_4.edges.bin",
+      "boxes": 7892
+    },
+    {
+      "cx": 7,
+      "cz": 5,
+      "mesh": "r_7_5.mesh.bin",
+      "edges": "r_7_5.edges.bin",
+      "boxes": 7797
+    },
+    {
+      "cx": 7,
+      "cz": 6,
+      "mesh": "r_7_6.mesh.bin",
+      "edges": "r_7_6.edges.bin",
+      "boxes": 8658
+    },
+    {
+      "cx": 7,
+      "cz": 7,
+      "mesh": "r_7_7.mesh.bin",
+      "edges": "r_7_7.edges.bin",
+      "boxes": 8753
+    },
+    {
+      "cx": 7,
+      "cz": 8,
+      "mesh": "r_7_8.mesh.bin",
+      "edges": "r_7_8.edges.bin",
+      "boxes": 11383
+    },
+    {
+      "cx": 7,
+      "cz": 9,
+      "mesh": "r_7_9.mesh.bin",
+      "edges": "r_7_9.edges.bin",
+      "boxes": 15136
+    },
+    {
+      "cx": 7,
+      "cz": 10,
+      "mesh": "r_7_10.mesh.bin",
+      "edges": "r_7_10.edges.bin",
+      "boxes": 7037
+    },
+    {
+      "cx": 7,
+      "cz": 11,
+      "mesh": "r_7_11.mesh.bin",
+      "edges": "r_7_11.edges.bin",
+      "boxes": 4456
+    },
+    {
+      "cx": 7,
+      "cz": 12,
+      "mesh": "r_7_12.mesh.bin",
+      "edges": "r_7_12.edges.bin",
+      "boxes": 7177
+    },
+    {
+      "cx": 7,
+      "cz": 13,
+      "mesh": "r_7_13.mesh.bin",
+      "edges": "r_7_13.edges.bin",
+      "boxes": 2048
+    },
+    {
+      "cx": 7,
+      "cz": 14,
+      "mesh": "r_7_14.mesh.bin",
+      "edges": "r_7_14.edges.bin",
+      "boxes": 5377
+    },
+    {
+      "cx": 7,
+      "cz": 15,
+      "mesh": "r_7_15.mesh.bin",
+      "edges": "r_7_15.edges.bin",
+      "boxes": 7944
+    },
+    {
+      "cx": 7,
+      "cz": 16,
+      "mesh": "r_7_16.mesh.bin",
+      "edges": "r_7_16.edges.bin",
+      "boxes": 3700
+    },
+    {
+      "cx": 7,
+      "cz": 17,
+      "mesh": "r_7_17.mesh.bin",
+      "edges": "r_7_17.edges.bin",
+      "boxes": 195
+    },
+    {
+      "cx": 7,
+      "cz": 18,
+      "mesh": "r_7_18.mesh.bin",
+      "edges": "r_7_18.edges.bin",
+      "boxes": 7939
+    },
+    {
+      "cx": 7,
+      "cz": 19,
+      "mesh": "r_7_19.mesh.bin",
+      "edges": "r_7_19.edges.bin",
+      "boxes": 642
+    },
+    {
+      "cx": 8,
+      "cz": 1,
+      "mesh": "r_8_1.mesh.bin",
+      "edges": "r_8_1.edges.bin",
+      "boxes": 11
+    },
+    {
+      "cx": 8,
+      "cz": 2,
+      "mesh": "r_8_2.mesh.bin",
+      "edges": "r_8_2.edges.bin",
+      "boxes": 18
+    },
+    {
+      "cx": 8,
+      "cz": 3,
+      "mesh": "r_8_3.mesh.bin",
+      "edges": "r_8_3.edges.bin",
+      "boxes": 1797
+    },
+    {
+      "cx": 8,
+      "cz": 4,
+      "mesh": "r_8_4.mesh.bin",
+      "edges": "r_8_4.edges.bin",
+      "boxes": 3673
+    },
+    {
+      "cx": 8,
+      "cz": 5,
+      "mesh": "r_8_5.mesh.bin",
+      "edges": "r_8_5.edges.bin",
+      "boxes": 5987
+    },
+    {
+      "cx": 8,
+      "cz": 6,
+      "mesh": "r_8_6.mesh.bin",
+      "edges": "r_8_6.edges.bin",
+      "boxes": 4879
+    },
+    {
+      "cx": 8,
+      "cz": 7,
+      "mesh": "r_8_7.mesh.bin",
+      "edges": "r_8_7.edges.bin",
+      "boxes": 5983
+    },
+    {
+      "cx": 8,
+      "cz": 8,
+      "mesh": "r_8_8.mesh.bin",
+      "edges": "r_8_8.edges.bin",
+      "boxes": 6304
+    },
+    {
+      "cx": 8,
+      "cz": 9,
+      "mesh": "r_8_9.mesh.bin",
+      "edges": "r_8_9.edges.bin",
+      "boxes": 9364
+    },
+    {
+      "cx": 8,
+      "cz": 10,
+      "mesh": "r_8_10.mesh.bin",
+      "edges": "r_8_10.edges.bin",
+      "boxes": 5007
+    },
+    {
+      "cx": 8,
+      "cz": 11,
+      "mesh": "r_8_11.mesh.bin",
+      "edges": "r_8_11.edges.bin",
+      "boxes": 1724
+    },
+    {
+      "cx": 8,
+      "cz": 12,
+      "mesh": "r_8_12.mesh.bin",
+      "edges": "r_8_12.edges.bin",
+      "boxes": 1395
+    },
+    {
+      "cx": 8,
+      "cz": 13,
+      "mesh": "r_8_13.mesh.bin",
+      "edges": "r_8_13.edges.bin",
+      "boxes": 548
+    },
+    {
+      "cx": 8,
+      "cz": 14,
+      "mesh": "r_8_14.mesh.bin",
+      "edges": "r_8_14.edges.bin",
+      "boxes": 258
+    },
+    {
+      "cx": 8,
+      "cz": 15,
+      "mesh": "r_8_15.mesh.bin",
+      "edges": "r_8_15.edges.bin",
+      "boxes": 2372
+    },
+    {
+      "cx": 8,
+      "cz": 16,
+      "mesh": "r_8_16.mesh.bin",
+      "edges": "r_8_16.edges.bin",
+      "boxes": 5206
+    },
+    {
+      "cx": 8,
+      "cz": 17,
+      "mesh": "r_8_17.mesh.bin",
+      "edges": "r_8_17.edges.bin",
+      "boxes": 1612
+    },
+    {
+      "cx": 8,
+      "cz": 18,
+      "mesh": "r_8_18.mesh.bin",
+      "edges": "r_8_18.edges.bin",
+      "boxes": 3132
+    },
+    {
+      "cx": 8,
+      "cz": 19,
+      "mesh": "r_8_19.mesh.bin",
+      "edges": "r_8_19.edges.bin",
+      "boxes": 306
+    },
+    {
+      "cx": 9,
+      "cz": 4,
+      "mesh": "r_9_4.mesh.bin",
+      "edges": "r_9_4.edges.bin",
+      "boxes": 3779
+    },
+    {
+      "cx": 9,
+      "cz": 5,
+      "mesh": "r_9_5.mesh.bin",
+      "edges": "r_9_5.edges.bin",
+      "boxes": 2657
+    },
+    {
+      "cx": 9,
+      "cz": 6,
+      "mesh": "r_9_6.mesh.bin",
+      "edges": "r_9_6.edges.bin",
+      "boxes": 4357
+    },
+    {
+      "cx": 9,
+      "cz": 7,
+      "mesh": "r_9_7.mesh.bin",
+      "edges": "r_9_7.edges.bin",
+      "boxes": 4372
+    },
+    {
+      "cx": 9,
+      "cz": 8,
+      "mesh": "r_9_8.mesh.bin",
+      "edges": "r_9_8.edges.bin",
+      "boxes": 2292
+    },
+    {
+      "cx": 9,
+      "cz": 9,
+      "mesh": "r_9_9.mesh.bin",
+      "edges": "r_9_9.edges.bin",
+      "boxes": 1818
+    },
+    {
+      "cx": 9,
+      "cz": 10,
+      "mesh": "r_9_10.mesh.bin",
+      "edges": "r_9_10.edges.bin",
+      "boxes": 1279
+    },
+    {
+      "cx": 9,
+      "cz": 11,
+      "mesh": "r_9_11.mesh.bin",
+      "edges": "r_9_11.edges.bin",
+      "boxes": 774
+    },
+    {
+      "cx": 9,
+      "cz": 12,
+      "mesh": "r_9_12.mesh.bin",
+      "edges": "r_9_12.edges.bin",
+      "boxes": 439
+    },
+    {
+      "cx": 9,
+      "cz": 13,
+      "mesh": "r_9_13.mesh.bin",
+      "edges": "r_9_13.edges.bin",
+      "boxes": 384
+    },
+    {
+      "cx": 9,
+      "cz": 14,
+      "mesh": "r_9_14.mesh.bin",
+      "edges": "r_9_14.edges.bin",
+      "boxes": 784
+    },
+    {
+      "cx": 9,
+      "cz": 15,
+      "mesh": "r_9_15.mesh.bin",
+      "edges": "r_9_15.edges.bin",
+      "boxes": 3144
+    },
+    {
+      "cx": 9,
+      "cz": 16,
+      "mesh": "r_9_16.mesh.bin",
+      "edges": "r_9_16.edges.bin",
+      "boxes": 2991
+    },
+    {
+      "cx": 9,
+      "cz": 17,
+      "mesh": "r_9_17.mesh.bin",
+      "edges": "r_9_17.edges.bin",
+      "boxes": 1416
+    },
+    {
+      "cx": 9,
+      "cz": 18,
+      "mesh": "r_9_18.mesh.bin",
+      "edges": "r_9_18.edges.bin",
+      "boxes": 65
+    },
+    {
+      "cx": 10,
+      "cz": 6,
+      "mesh": "r_10_6.mesh.bin",
+      "edges": "r_10_6.edges.bin",
+      "boxes": 301
+    },
+    {
+      "cx": 10,
+      "cz": 7,
+      "mesh": "r_10_7.mesh.bin",
+      "edges": "r_10_7.edges.bin",
+      "boxes": 6000
+    },
+    {
+      "cx": 10,
+      "cz": 8,
+      "mesh": "r_10_8.mesh.bin",
+      "edges": "r_10_8.edges.bin",
+      "boxes": 5147
+    },
+    {
+      "cx": 10,
+      "cz": 9,
+      "mesh": "r_10_9.mesh.bin",
+      "edges": "r_10_9.edges.bin",
+      "boxes": 1352
+    },
+    {
+      "cx": 10,
+      "cz": 10,
+      "mesh": "r_10_10.mesh.bin",
+      "edges": "r_10_10.edges.bin",
+      "boxes": 1520
+    },
+    {
+      "cx": 10,
+      "cz": 11,
+      "mesh": "r_10_11.mesh.bin",
+      "edges": "r_10_11.edges.bin",
+      "boxes": 60
+    },
+    {
+      "cx": 10,
+      "cz": 12,
+      "mesh": "r_10_12.mesh.bin",
+      "edges": "r_10_12.edges.bin",
+      "boxes": 2715
+    },
+    {
+      "cx": 10,
+      "cz": 13,
+      "mesh": "r_10_13.mesh.bin",
+      "edges": "r_10_13.edges.bin",
+      "boxes": 3034
+    },
+    {
+      "cx": 10,
+      "cz": 15,
+      "mesh": "r_10_15.mesh.bin",
+      "edges": "r_10_15.edges.bin",
+      "boxes": 107
+    },
+    {
+      "cx": 10,
+      "cz": 16,
+      "mesh": "r_10_16.mesh.bin",
+      "edges": "r_10_16.edges.bin",
+      "boxes": 179
+    },
+    {
+      "cx": 11,
+      "cz": 7,
+      "mesh": "r_11_7.mesh.bin",
+      "edges": "r_11_7.edges.bin",
+      "boxes": 136
+    },
+    {
+      "cx": 11,
+      "cz": 8,
+      "mesh": "r_11_8.mesh.bin",
+      "edges": "r_11_8.edges.bin",
+      "boxes": 2944
+    },
+    {
+      "cx": 11,
+      "cz": 9,
+      "mesh": "r_11_9.mesh.bin",
+      "edges": "r_11_9.edges.bin",
+      "boxes": 6412
+    },
+    {
+      "cx": 11,
+      "cz": 10,
+      "mesh": "r_11_10.mesh.bin",
+      "edges": "r_11_10.edges.bin",
+      "boxes": 8278
+    },
+    {
+      "cx": 11,
+      "cz": 11,
+      "mesh": "r_11_11.mesh.bin",
+      "edges": "r_11_11.edges.bin",
+      "boxes": 5119
+    },
+    {
+      "cx": 11,
+      "cz": 12,
+      "mesh": "r_11_12.mesh.bin",
+      "edges": "r_11_12.edges.bin",
+      "boxes": 4789
+    },
+    {
+      "cx": 11,
+      "cz": 13,
+      "mesh": "r_11_13.mesh.bin",
+      "edges": "r_11_13.edges.bin",
+      "boxes": 1516
+    }
+  ],
+  "totalBoxes": 721585
+}

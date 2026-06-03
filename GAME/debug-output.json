@@ -1,0 +1,1502 @@
+[
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495062.552552
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495063.555119
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495064.5525088
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495065.55459
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495066.554518
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495067.555251
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495068.559081
+  },
+  {
+    "fps": 59,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495069.5601852
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495070.560334
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495071.5578299
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495072.55789
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495073.558811
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495074.5606248
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495075.5648372
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495076.565144
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 215,
+    "triangles": 9310688,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495077.563642
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495078.5641458
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495079.564311
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495080.565353
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495081.571288
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495082.5707939
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495083.5677571
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495084.569223
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495085.575687
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495086.57458
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495087.5734122
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495088.57661
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495089.573225
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495090.5733829
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495091.577375
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495092.578551
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495093.576446
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 215,
+    "triangles": 9310688,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495094.581373
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495095.57855
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495096.5856352
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495097.583651
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495098.58351
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495099.584042
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495100.5819001
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495101.583402
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495102.586019
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495103.587109
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495104.594757
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495105.588075
+  },
+  {
+    "fps": 59,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495106.58981
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495107.5875142
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495108.589758
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495109.590505
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495110.5915341
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495111.591337
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495112.595068
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495113.593287
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495115.314674
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495116.3151329
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495117.31348
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495118.314569
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495119.318408
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495120.3199968
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495121.3194828
+  },
+  {
+    "fps": 60,
+    "children": 371,
+    "nonMapCount": 1,
+    "drawCalls": 217,
+    "triangles": 9310736,
+    "geometries": 238,
+    "projectiles": 0,
+    "crossParticles": 0,
+    "playerPos": [
+      395,
+      95,
+      568
+    ],
+    "nonMapHistogram": [
+      {
+        "key": "BoxGeometry|e5e5e5|V",
+        "count": 1
+      }
+    ],
+    "pooledCount": 0,
+    "instancedCount": 7,
+    "mapCount": 362,
+    "server_time": 1780495238.332453
+  }
+]

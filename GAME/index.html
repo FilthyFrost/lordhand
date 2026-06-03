@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYPER_WHITE — SURREAL CATHEDRAL</title>
+    <style>
+        /* === 原始地图样式 (1:1) === */
+        body { margin: 0; overflow: hidden; background: linear-gradient(180deg, #b3e6ff 0%, #ffffff 50%, #d9eaff 100%); font-family: 'Courier New', monospace; }
+        canvas { display: block; width: 100vw; height: 100vh; }
+        .halftone-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle, #000 1.5px, transparent 2px); background-size: 10px 10px; opacity: 0.06; pointer-events: none; z-index: 10; }
+        #ui { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+        #crosshair { /* styled inline */ }
+        #hud { display: none; /* replaced by battle HUD elements */ }
+        #blocker { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; display: none; flex-direction: column; justify-content: center; align-items: center; color: white; pointer-events: auto; cursor: pointer; z-index: 10; }
+        #instructions { text-align: center; font-size: 15px; text-shadow: 2px 2px 0px #000; line-height: 1.8; }
+        .title { font-size: 38px; font-weight: bold; color: #fff; text-shadow: 4px 4px 0px #00ffff, -3px -3px 0px #3344aa; margin-bottom: 12px; letter-spacing: 4px; font-style: italic; }
+        .key { color: #00ffff; font-weight: bold; }
+        #speedlines { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, transparent 30%, rgba(0,255,255,0.15) 100%); opacity: 0; transition: opacity 0.05s; }
+        #screen-flash { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; opacity: 0; pointer-events: none; transition: opacity 0.1s ease-out; z-index: 5; }
+        #rail-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); color: #00ffff; font-size: 13px; opacity: 0; transition: opacity 0.2s; text-shadow: 0 0 8px #00ffff; }
+        #loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #00ffff; font-size: 18px; z-index: 20; }
+
+        /* === 主菜单覆盖层 (1:1复刻自 主界面_FInal.html) === */
+        @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=VT323&display=swap');
+
+        :root {
+            --chrome-bright: #ffffff;
+            --chrome-dark: #8892b0;
+            --accent-red: #ff003c;
+            --dream-sky: #a8d5ff;
+            --dream-cloud: #e8f4ff;
+        }
+
+        #menu-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 100; overflow: hidden; cursor: default;
+            font-family: 'Courier New', Courier, monospace; user-select: none;
+        }
+
+        .gothic-font { font-family: 'UnifrakturMaguntia', cursive; }
+        .pixel-font { font-family: 'VT323', monospace; }
+
+        .bg-dreamcore {
+            position: absolute; inset: -20%;
+            background: radial-gradient(circle at 50% 50%, var(--dream-cloud) 0%, var(--dream-sky) 60%, #ffb6c1 100%);
+            filter: contrast(120%) brightness(110%); z-index: 0;
+        }
+
+        .chrome-text {
+            background: linear-gradient(180deg, #ffffff 0%, #7a8094 40%, #111317 50%, #c4c7d0 60%, #ffffff 100%);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            filter: drop-shadow(0px 0px 4px rgba(255,255,255,0.8)) drop-shadow(0px 5px 15px rgba(0,0,0,0.5));
+            position: relative;
+        }
+        .chrome-text::after {
+            content: attr(data-text); position: absolute; left: 0; top: 0; z-index: -1;
+            background: linear-gradient(180deg, #000 0%, #333 100%);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            filter: blur(8px); transform: translate(2px, 5px);
+        }
+
+        .ps1-overlay {
+            position: absolute; inset: 0; pointer-events: none; z-index: 100;
+            background-image: linear-gradient(rgba(0,0,0,0.1) 50%, transparent 50%),
+                url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.15"/></svg>');
+            background-size: 100% 4px, 256px 256px; mix-blend-mode: overlay; image-rendering: pixelated;
+        }
+
+        .state-psychotic { animation: liquid-warp 1s cubic-bezier(0.7, 0, 0.3, 1) forwards; }
+        .state-psychotic .chrome-text { text-shadow: 0 0 20px rgba(255,255,255,0.8); animation: text-pulse 1s ease-in-out; }
+
+        @keyframes liquid-warp {
+            0% { filter: blur(0px) contrast(1) grayscale(0%); transform: scale(1); opacity: 1; }
+            40% { filter: blur(15px) contrast(30) grayscale(100%) saturate(0%); transform: scale(1.03) skewX(2deg); opacity: 0.9; }
+            60% { filter: blur(20px) contrast(40) grayscale(100%) saturate(0%); transform: scale(1.05) skewX(-2deg); opacity: 0.9; }
+            100% { filter: blur(0px) contrast(1) grayscale(0%); transform: scale(1); opacity: 1; }
+        }
+        @keyframes text-pulse {
+            0% { transform: scale(1); letter-spacing: normal; }
+            50% { transform: scale(1.1); letter-spacing: 0.2em; filter: blur(4px); }
+            100% { transform: scale(1); letter-spacing: normal; }
+        }
+        @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+
+        .menu-item { position: relative; cursor: pointer; transition: all 0.1s; }
+        .menu-item:hover { transform: scale(1.05) skewX(-10deg); letter-spacing: 0.1em; color: #fff; }
+        .menu-item:hover::before { content: '>'; position: absolute; left: -40px; color: var(--accent-red); animation: blink 0.1s infinite; }
+        .menu-item:active { transform: scale(0.95) skewX(20deg); filter: invert(1); }
+
+        .sigil { position: absolute; width: 300px; height: 300px; pointer-events: none; opacity: 0.8; mix-blend-mode: hard-light; filter: drop-shadow(0 0 10px white); display: flex; align-items: center; justify-content: center; }
+
+        .setting-row { border-bottom: 1px solid rgba(0,0,0,0.2); transition: all 0.2s; display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1rem; color: #000; }
+        .setting-row:hover { background: rgba(0,0,0,0.1); transform: translateX(10px); border-left: 5px solid var(--accent-red); }
+
+        .health-bar-container {
+            clip-path: polygon(0 0, 100% 20%, 95% 100%, 5% 80%);
+            filter: url(#liquidMetal) drop-shadow(0 0 10px red);
+        }
+
+        @media (max-width: 768px) {
+            #menu-settings-panel > div:nth-child(2) { grid-template-columns: 1fr !important; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全局SVG滤镜 (供菜单+HUD使用) -->
+    <svg style="position:absolute;width:0;height:0;overflow:hidden;">
+        <defs>
+            <filter id="liquidMetal">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- 主菜单 (1:1复刻自 主界面_FInal.html) -->
+    <div id="menu-overlay">
+        <!-- Dreamcore 背景 -->
+        <div class="bg-dreamcore"></div>
+
+        <!-- Cybersigilism 符文装饰 -->
+        <div class="sigil" id="sigil-left" style="top:25%; left:40px;">
+            <div style="position:absolute; width:100%; height:2px; background:#000; transform:rotate(45deg) scaleX(1.5); filter:url(#liquidMetal);"></div>
+            <div style="position:absolute; width:100%; height:2px; background:#000; transform:rotate(-45deg) scaleX(1.5); filter:url(#liquidMetal);"></div>
+            <div style="position:absolute; width:128px; height:128px; border:4px solid #000; border-radius:50%; filter:url(#liquidMetal);"></div>
+        </div>
+        <div class="sigil" id="sigil-right" style="bottom:25%; right:40px;">
+            <div style="position:absolute; width:100%; height:4px; background:#fff; transform:rotate(12deg) scaleX(1.5); mix-blend-mode:difference; filter:url(#liquidMetal);"></div>
+            <div style="position:absolute; width:100%; height:4px; background:#fff; transform:rotate(-12deg) scaleX(1.5); mix-blend-mode:difference; filter:url(#liquidMetal);"></div>
+        </div>
+
+        <!-- 视差容器 -->
+        <div id="menu-parallax-wrapper" style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; z-index:10; transition: transform 0.1s ease-out;">
+
+            <!-- 主菜单内容 -->
+            <div id="menu-main-content" style="display:flex; flex-direction:column; align-items:center; width:100%; max-width:900px; padding:2rem;">
+                <h1 class="gothic-font chrome-text" data-text="HYPER_WHITE" style="font-size:clamp(4rem,12vw,9rem); letter-spacing:-0.03em; line-height:1; margin-bottom:4rem; text-align:center;">HYPER_WHITE</h1>
+                <div style="display:flex; flex-direction:column; align-items:flex-start; gap:1.5rem; width:100%; max-width:500px; padding-left:8rem;">
+                    <div class="menu-item gothic-font" data-menu-action="continue" style="font-size:clamp(2.5rem,5vw,3.5rem); color:#000;">CONTINUE / 继续游戏</div>
+                    <div class="menu-item gothic-font" data-menu-action="newgame" style="font-size:clamp(2.5rem,5vw,3.5rem); color:#000;">NEW GAME / 新游戏</div>
+                    <div class="menu-item gothic-font" data-menu-action="settings" style="font-size:clamp(2.5rem,5vw,3.5rem); color:#000;">SETTINGS / 设置</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 设置面板 (独立全屏定位，不在视差容器内) -->
+        <div id="menu-settings-panel" style="display:none; position:absolute; inset:0; z-index:20; flex-direction:column; padding:3rem 3rem; color:#000; overflow-y:auto;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:3rem;">
+                <h2 class="gothic-font chrome-text" data-text="SETTINGS" style="font-size:4.5rem;">SETTINGS</h2>
+                <div class="menu-item pixel-font" data-menu-action="back" style="font-size:1.8rem; font-weight:bold; margin-bottom:0.5rem;">[ ESC / BACK ]</div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; font-size:1.5rem;" class="pixel-font">
+                <div>
+                    <div style="border-bottom:4px solid #000; margin-bottom:1.5rem; padding-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.2em; font-weight:bold;">AUDIO / 音频</div>
+                    <div class="setting-row">
+                        <span>MASTER VOL / 主音量</span>
+                        <div style="display:flex; align-items:center; gap:1rem;">
+                            <span id="menu-vol-display">100%</span>
+                            <input type="range" min="0" max="100" value="100" id="menu-vol-slider" style="cursor:pointer; accent-color:#ff003c;">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="border-bottom:4px solid #000; margin-bottom:1.5rem; padding-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.2em; font-weight:bold;">VIDEO / 画面</div>
+                    <div class="setting-row">
+                        <span>FOV WARP / 视场角</span>
+                        <div style="display:flex; align-items:center; gap:1rem;">
+                            <span id="menu-fov-display">90</span>
+                            <input type="range" min="60" max="140" value="90" id="menu-fov-slider" style="cursor:pointer; accent-color:#000;">
+                        </div>
+                    </div>
+                    <div class="setting-row" id="menu-blood-toggle" style="cursor:pointer;">
+                        <span>GORE / 血腥</span>
+                        <span id="menu-blood-display" style="color:#ff003c; font-weight:bold;">ENABLED</span>
+                    </div>
+                    <div class="setting-row">
+                        <span>CRT FILTER</span>
+                        <span style="font-weight:bold;">LOCKED (MANDATORY)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pixel-font" style="margin-top:auto; text-align:center; opacity:0.5; font-size:1rem; padding-top:2rem;">WARNING: ALTERING FOV MAY CAUSE SEVERE MOTION SICKNESS.</div>
+        </div>
+
+        <!-- 版本号 -->
+        <div class="pixel-font" style="position:absolute; bottom:2rem; left:2rem; color:#000; opacity:0.7; font-size:1.1rem; z-index:10;">V 1.0.9 // PRESS [F1] TO ASCEND</div>
+
+        <!-- PS1/CRT 叠加 -->
+        <div class="ps1-overlay"></div>
+    </div>
+
+    <!-- 加载过场动画 (iframe, 独立运行) -->
+    <iframe id="loading-iframe" src="" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:99; border:none; display:none;"></iframe>
+
+    <!-- 战斗HUD (1:1复刻自 战斗界面_Final.html, 排除卡牌) -->
+    <div class="halftone-overlay"></div>
+    <div id="ui">
+        <div id="speedlines"></div>
+        <div id="screen-flash"></div>
+        <div id="rail-indicator">// ON RAIL - SPACE TO JUMP //</div>
+
+        <!-- 准星 (mix-blend-difference 十字线) -->
+        <div id="crosshair" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:32px; height:32px; pointer-events:none; mix-blend-mode:difference; display:flex; align-items:center; justify-content:center; opacity:0.5;">
+            <div style="position:absolute; width:100%; height:2px; background:#fff;"></div>
+            <div style="position:absolute; height:100%; width:2px; background:#fff;"></div>
+        </div>
+
+        <!-- 左上: ESC + 波次 -->
+        <div style="position:absolute; top:1.5rem; left:2rem; display:flex; flex-direction:column; align-items:flex-start; gap:1rem;">
+            <div class="menu-item gothic-font" style="font-size:2rem; color:#000; pointer-events:auto; text-shadow:0 1px 3px rgba(0,0,0,0.3);">[ ESC ]</div>
+            <div id="wave-display" class="pixel-font" style="font-size:1.5rem; font-weight:bold; letter-spacing:0.3em; color:#000; mix-blend-mode:overlay; opacity:0.8; text-shadow:0 0 4px rgba(0,0,0,0.3);">波次：01</div>
+        </div>
+
+        <!-- 右上: 高度 + 分割线 -->
+        <div style="position:absolute; top:1.5rem; right:2rem; display:flex; flex-direction:column; align-items:flex-end; pointer-events:none;">
+            <div class="pixel-font" style="font-size:1.5rem; font-weight:bold; letter-spacing:0.3em; color:#000; mix-blend-mode:overlay; opacity:0.8; text-shadow:0 0 4px rgba(0,0,0,0.3);">高度：<span id="height-display">0</span>M</div>
+            <div style="width:16rem; height:2px; background:#000; margin-top:0.5rem; filter:url(#liquidMetal);"></div>
+        </div>
+
+        <!-- 左下: 血量条 -->
+        <div style="position:absolute; bottom:2.5rem; left:2.5rem; width:20rem;">
+            <div id="health-label" class="pixel-font" style="font-size:1.2rem; color:#000; font-weight:bold; margin-bottom:0.25rem; text-shadow:0 0 3px rgba(0,0,0,0.3);">血量 // 100</div>
+            <div class="health-bar-container" style="height:2rem; width:100%; background:rgba(0,0,0,0.5); position:relative; overflow:hidden; padding:2px;">
+                <div id="health-fill" style="width:100%; height:100%; background:#cc0000; filter:contrast(150%);"></div>
+            </div>
+        </div>
+    </div>
+    <div id="loading" style="display:none;">LOADING WORLD...</div>
+    <div id="blocker" style="display:none;">
+        <div id="blocker-content" style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; background:rgba(255,255,255,0.2);">
+            <h2 id="blocker-title" class="pixel-font chrome-text" data-text="点击进入战场" style="font-size:6rem; font-weight:bold; margin-bottom:4rem;">点击进入战场</h2>
+            <div id="blocker-menu" style="display:none; flex-direction:column; align-items:center; gap:2rem;">
+                <div class="menu-item pixel-font" id="blocker-resume" style="font-size:2.25rem; font-weight:bold; color:#000;">继续游戏</div>
+                <div class="menu-item pixel-font" id="blocker-settings" style="font-size:2.25rem; font-weight:bold; color:#000;">设置</div>
+                <div class="menu-item pixel-font" id="blocker-mainmenu" style="font-size:2.25rem; font-weight:bold; color:#000;">返回主菜单</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/utils/BufferGeometryUtils.js" type="module" id="bgu-loader"></script>
+    <script>
+    // Polyfill: make BufferGeometryUtils available globally (loaded as module above may not work)
+    // Inline minimal mergeGeometries implementation
+    if (!THREE.BufferGeometryUtils) {
+        THREE.BufferGeometryUtils = {
+            mergeGeometries(geometries, useGroups) {
+                const isIndexed = geometries[0].index !== null;
+                const attributesUsed = new Set(Object.keys(geometries[0].attributes));
+                const attributes = {};
+                const mergedIndex = [];
+                let offset = 0;
+
+                for (const name of attributesUsed) {
+                    attributes[name] = [];
+                }
+
+                for (const geo of geometries) {
+                    for (const name of attributesUsed) {
+                        if (!geo.attributes[name]) return null;
+                        attributes[name].push(geo.attributes[name]);
+                    }
+                    if (isIndexed) {
+                        const index = geo.index;
+                        for (let i = 0; i < index.count; i++) {
+                            mergedIndex.push(index.getX(i) + offset);
+                        }
+                    }
+                    offset += geo.attributes.position.count;
+                }
+
+                const merged = new THREE.BufferGeometry();
+                for (const name of attributesUsed) {
+                    const arrays = attributes[name];
+                    const itemSize = arrays[0].itemSize;
+                    const totalLen = arrays.reduce((s, a) => s + a.count * itemSize, 0);
+                    const mergedArray = new Float32Array(totalLen);
+                    let off = 0;
+                    for (const attr of arrays) {
+                        mergedArray.set(attr.array, off);
+                        off += attr.count * itemSize;
+                    }
+                    merged.setAttribute(name, new THREE.BufferAttribute(mergedArray, itemSize));
+                }
+                if (isIndexed) {
+                    merged.setIndex(mergedIndex);
+                }
+                return merged;
+            }
+        };
+    }
+    </script>
+
+    <!-- World infrastructure -->
+    <script src="scripts/world/spatial-hash.js"></script>
+    <script src="scripts/world/spawner.js"></script>
+
+    <!-- Core subsystems -->
+    <script src="scripts/core/audio.js"></script>
+    <script src="scripts/core/vfx.js"></script>
+
+    <!-- World rendering & mechanics -->
+    <script src="scripts/world/static-world.js"></script>
+    <script src="scripts/world/mechanics.js"></script>
+
+    <!-- Core game loop -->
+    <script src="scripts/core/game-core.js"></script>
+
+    <!-- Debug diagnostics -->
+    <script src="scripts/core/debug.js"></script>
+
+    <!-- Menu system -->
+    <script src="scripts/ui/menu.js"></script>
+
+    <!-- Combat system (ES6 module) -->
+    <script type="module" src="scripts/combat/init-combat.js"></script>
+</body>
+</html>

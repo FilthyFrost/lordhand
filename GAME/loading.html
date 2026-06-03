@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>纯白视界 // 意识洗涤中</title>
+    <style>
+        :root {
+            --neon-white: #ffffff;
+            --void-black: #050505;
+            --acid-cyan: #00ffff;
+            --acid-pink: #ff00ff;
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: var(--neon-white);
+            /* 采用宋体类衬线字体，增强宗教感与尖锐感 */
+            font-family: 'NSimSun', 'SimSun', 'STSong', serif;
+            color: var(--void-black);
+            user-select: none;
+            cursor: crosshair;
+        }
+
+        /* --- 3D 渲染画布 --- */
+        #game-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        /* --- 极度锐利的 UI 叠加层 --- */
+        #hud {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            /* 差值混合：UI在白色背景下变黑，在黑色下变白，永远保持极致锐利 */
+            /* mix-blend-mode: difference; 已移除，为 3D 镀铬字体让路 */
+        }
+
+        /* Cybersigilism 边角符印 */
+        .sigil-corner {
+            position: absolute;
+            width: 15vw;
+            height: 15vw;
+            max-width: 100px;
+            max-height: 100px;
+            background: #fff;
+            mix-blend-mode: difference; /* 保持符印的反色属性 */
+        }
+        .top-left { top: 20px; left: 20px; clip-path: polygon(0 0, 100% 0, 10% 10%, 0 100%); }
+        .top-right { top: 20px; right: 20px; clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 10%); }
+        .bottom-left { bottom: 20px; left: 20px; clip-path: polygon(0 0, 10% 90%, 100% 100%, 0 100%); }
+        .bottom-right { bottom: 20px; right: 20px; clip-path: polygon(100% 0, 100% 100%, 0 100%, 90% 90%); }
+
+        /* 中心加载进度区域 */
+        #center-core {
+            position: relative;
+            display: flex;
+            pointer-events: auto;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        /* 旋转的尖刺光环 (稍微缩小，防止遮挡巨型文字) */
+        #halo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            border: 2px solid transparent;
+            border-top-color: #fff;
+            border-bottom-color: #fff;
+            border-radius: 50%;
+            animation: spin-halo 2s linear infinite;
+            /* 制造破碎感 */
+            clip-path: polygon(50% 0%, 100% 20%, 80% 50%, 100% 80%, 50% 100%, 0% 80%, 20% 50%, 0% 20%);
+            mix-blend-mode: difference;
+            z-index: 1;
+        }
+
+        @keyframes spin-halo {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* --- 核心修复：为 Y 轴拉伸的文字提供真实的物理占位空间 --- */
+        .title-wrapper {
+            margin-top: -5vh; /* 整体向上提，拉开与加载条的距离 */
+            margin-bottom: 18vh; /* 强制撑开极大的下方空间，彻底解决覆盖问题 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* --- Y2K 哥特荆棘液态镀铬字体 (Liquid Chrome Gothic) --- */
+        .title-text {
+            font-family: 'NSimSun', 'SimSun', 'STSong', serif;
+            font-size: 7vw; /* 基础字号适度缩小，为横向拉伸留出视口空间 */
+            font-weight: 900;
+            letter-spacing: 12px; /* 增加字间距，防止拉宽后字符粘连 */
+            
+            /* 哥特黑体化：保持极度高耸的同时，整体大幅拉宽 (scaleX 提升到 1.8) */
+            transform: scaleY(3.5) scaleX(1.8);
+            transform-origin: center;
+            
+            /* Y2K 镀铬金属渐变 */
+            background: linear-gradient(
+                180deg, 
+                #ffffff 0%, 
+                #d0d0d0 25%, 
+                #444444 48%, 
+                #000000 50%, 
+                #aaaaaa 55%, 
+                #ffffff 100%
+            );
+            -webkit-background-clip: text;
+            color: transparent;
+            
+            /* 叠加 SVG 3D 熔岩荆棘滤镜 */
+            filter: url(#liquid-chrome-thorn) drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+            position: relative;
+            z-index: 10;
+        }
+
+        .progress-wrapper {
+            margin-top: 6vh;
+            margin-bottom: 4vh;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
+
+        /* 纯数字进度显示 */
+        #progress-number {
+            font-size: 10vw;
+            font-weight: 900;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            transform: scaleY(2.0) scaleX(0.9);
+            line-height: 1;
+            letter-spacing: 0;
+            
+            background: linear-gradient(
+                180deg, 
+                #ffffff 0%, 
+                #e0e0e0 30%, 
+                #222222 49%, 
+                #000000 50%, 
+                #888888 60%, 
+                #ffffff 100%
+            );
+            -webkit-background-clip: text;
+            color: transparent;
+            filter: url(#liquid-chrome-thorn);
+        }
+
+        .percent-sign {
+            font-size: 4vw;
+            font-weight: 900;
+            transform: scaleY(2.0);
+            color: #000;
+            margin-left: 15px;
+        }
+
+        .status-text {
+            font-size: 1.2rem;
+            letter-spacing: 0.5em;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* 进度条锋利化 */
+        #bar-container {
+            width: 600px;
+            max-width: 80vw;
+            height: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            /* 极具攻击性的外框 */
+            clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+            margin-top: 2vh;
+        }
+
+        #bar-fill {
+            height: 100%;
+            width: 0%;
+            background: #000; /* 纯黑填充，极简冷酷 */
+            transition: width 0.1s linear;
+        }
+
+        #enter-btn {
+            display: none;
+            margin-top: 4vh;
+            padding: 15px 50px;
+            font-size: 1.5rem;
+            color: #fff;
+            background: #000;
+            border: 2px solid #000;
+            cursor: pointer;
+            font-family: 'NSimSun', 'SimSun', 'STSong', serif;
+            font-weight: 900;
+            transition: all 0.2s;
+            pointer-events: auto;
+        }
+
+        #enter-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+
+    <!-- 核心修复：添加 Three.js 依赖映射，解决模块解析失败导致的白屏 -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 注入 3D 哥特液态金属荆棘滤镜 (SVG Filter Engine) -->
+    <svg style="width:0; height:0; position:absolute; z-index:-1;">
+        <defs>
+            <filter id="liquid-chrome-thorn" x="-20%" y="-20%" width="140%" height="140%">
+                <!-- 1. 调整频率和强度，保留荆棘感但不撕裂字体 -->
+                <feTurbulence type="fractalNoise" baseFrequency="0.08 0.2" numOctaves="2" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+                
+                <!-- 2. 生成高度图用于 3D 运算 -->
+                <feGaussianBlur in="displaced" stdDeviation="1.5" result="blur" />
+                
+                <!-- 3. Y2K 高反射 3D 镜面光照 (Liquid Chrome Specular Lighting) -->
+                <feSpecularLighting in="blur" surfaceScale="4" specularConstant="2.5" specularExponent="40" lighting-color="#ffffff" result="specular">
+                    <fePointLight x="500" y="-500" z="300" />
+                </feSpecularLighting>
+                
+                <!-- 4. 将高光叠加回被扭曲的文字主体上 -->
+                <feComposite in="specular" in2="displaced" operator="in" result="specularMasked" />
+                <feComposite in="displaced" in2="specularMasked" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- UI Overlay -->
+    <div id="hud">
+        <div class="sigil-corner top-left"></div>
+        <div class="sigil-corner top-right"></div>
+        <div class="sigil-corner bottom-left"></div>
+        <div class="sigil-corner bottom-right"></div>
+
+        <div id="center-core">
+            <div id="halo"></div>
+            
+            <!-- 加入容器包裹，阻断 CSS transform 导致的排版塌陷 -->
+            <div class="title-wrapper">
+                <div class="title-text">地图加载中</div>
+            </div>
+            
+            <div id="bar-container">
+                <div id="bar-fill"></div>
+            </div>
+
+            <div class="progress-wrapper">
+                <span id="progress-number">0</span>
+                <span class="percent-sign">%</span>
+            </div>
+            
+            <div id="status-text" class="status-text">初始化渲染引擎...</div>
+            
+            <button id="enter-btn">进入地图</button>
+        </div>
+    </div>
+
+    <!-- CANVAS -->
+    <canvas id="game-canvas"></canvas>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+        import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+
+        // --- 致幻剂极度扭曲 Shader (Neon White Acid Shader) ---
+        // 专为高亮度、极白环境打造。保留水波纹畸变，加入色散和曝光溢出。
+        const NeonAcidShader = {
+            uniforms: {
+                "tDiffuse": { value: null },
+                "time": { value: 0 },
+                "intensity": { value: 1.0 } // 速度越快，扭曲越强
+            },
+            vertexShader: `
+                varying vec2 vUv;
+                void main() {
+                    vUv = uv;
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+            `,
+            fragmentShader: `
+                uniform sampler2D tDiffuse;
+                uniform float time;
+                uniform float intensity;
+                varying vec2 vUv;
+
+                void main() {
+                    vec2 uv = vUv;
+                    
+                    // 1. 高频水波畸变 (Acid Wiggle)
+                    float waveDist = intensity * 0.015;
+                    uv.x += sin(uv.y * 30.0 + time * 20.0) * waveDist;
+                    uv.y += cos(uv.x * 30.0 + time * 15.0) * waveDist;
+
+                    // 2. 刺眼的色差分离 (Chromatic Aberration - Cyan / Magenta)
+                    // 在 Neon White 风格中，色差是极其重要的速度感体现
+                    float split = intensity * 0.008 + sin(time * 10.0) * 0.002;
+                    float r = texture2D(tDiffuse, uv + vec2(split, 0.0)).r;
+                    float g = texture2D(tDiffuse, uv).g;
+                    float b = texture2D(tDiffuse, uv - vec2(split, 0.0)).b;
+                    
+                    vec3 color = vec3(r, g, b);
+
+                    // 3. 极端对比度与过曝 (Exposure & Contrast)
+                    // 压暗黑色，让白色更刺眼
+                    color = smoothstep(0.1, 0.9, color);
+                    // 提亮整体，强制制造白炽感
+                    color = pow(color, vec3(0.6)); 
+
+                    // 【安全修改】：去除了所有高频反色闪烁，保护光敏性癫痫玩家
+                    // 疯劲儿由波浪畸变和色差承担，不依赖频闪
+
+                    gl_FragColor = vec4(color, 1.0);
+                }
+            `
+        };
+
+        const canvas = document.getElementById('game-canvas');
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: false });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+
+        const scene = new THREE.Scene();
+        // 核心：极度耀眼的纯白浓雾，创造出无尽的天堂感
+        scene.fog = new THREE.FogExp2(0xffffff, 0.004); 
+        scene.background = new THREE.Color(0xffffff);
+
+        const camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 1000);
+        
+        const composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
+
+        // 极高强度的 Bloom 泛光，让纯白色发光，黑色部位更显深邃
+        const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.2, 0.8);
+        composer.addPass(bloomPass);
+
+        const acidPass = new ShaderPass(NeonAcidShader);
+        composer.addPass(acidPass);
+
+        // 生成极简、尖锐的 Cybersigilism 几何刺青贴图，替代繁杂的中文字符
+        function createSigilTextTexture() {
+            const c = document.createElement('canvas');
+            c.width = 1024;
+            c.height = 1024;
+            const ctx = c.getContext('2d');
+            
+            // 黑底
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, 1024, 1024);
+            
+            // 绘制极度疯狂、交织的 Cybersigilism 荆棘线条
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineJoin = 'miter';
+            ctx.miterLimit = 10;
+            
+            // 生成锐利的随机折线网
+            for(let i=0; i<80; i++) {
+                ctx.beginPath();
+                ctx.lineWidth = Math.random() * 6 + 2;
+                let startX = Math.random() * 1024;
+                let startY = Math.random() * 1024;
+                ctx.moveTo(startX, startY);
+                
+                // 每次折线连续切折 3-6 次，形成利刃感
+                const segments = Math.floor(Math.random() * 4) + 3;
+                for(let j=0; j<segments; j++) {
+                    startX += (Math.random() - 0.5) * 400;
+                    startY += (Math.random() - 0.5) * 400;
+                    ctx.lineTo(startX, startY);
+                }
+                ctx.stroke();
+            }
+
+            // 添加一些工业感的硬边矩形切块
+            ctx.fillStyle = '#ffffff';
+            for(let i=0; i<30; i++) {
+                ctx.fillRect(Math.random()*1024, Math.random()*1024, Math.random()*100, Math.random()*10);
+            }
+
+            const tex = new THREE.CanvasTexture(c);
+            tex.wrapS = THREE.RepeatWrapping;
+            tex.wrapT = THREE.RepeatWrapping;
+            tex.repeat.set(6, 30); // 极度拉伸产生速度感
+            tex.magFilter = THREE.NearestFilter;
+            return tex;
+        }
+
+        const sigilTex = createSigilTextTexture();
+        const tunnelMat = new THREE.MeshBasicMaterial({ 
+            map: sigilTex, 
+            side: THREE.BackSide,
+            color: 0x888888 // 稍微调暗贴图，让白雾（Fog）效果更凸显
+        });
+
+        // 空间狂乱弯道计算 (增强了扭转幅度，让隧道像肠道一样疯狂纠缠)
+        function getTrackPosition(z) {
+            // 参数翻倍，制造极其疯狂的物理空间扭曲，代替频闪带来的刺激感
+            const baseX = Math.sin(z * 0.008) * 100.0 + Math.sin(z * 0.003) * 50.0;
+            const baseY = Math.cos(z * 0.007) * 90.0 + Math.sin(z * 0.009) * 40.0;
+
+            const nextX = Math.sin((z - 1) * 0.008) * 100.0 + Math.sin((z - 1) * 0.003) * 50.0;
+            const nextY = Math.cos((z - 1) * 0.007) * 90.0 + Math.sin((z - 1) * 0.009) * 40.0;
+
+            const tangent = new THREE.Vector3(nextX - baseX, nextY - baseY, -1).normalize();
+            const right = new THREE.Vector3().crossVectors(tangent, new THREE.Vector3(0,1,0)).normalize();
+
+            return { pos: new THREE.Vector3(baseX, baseY, z), right: right };
+        }
+
+        const activeSegments = [];
+        
+        function generateSegment(zStart, zEnd) {
+            const steps = 10; // 降低面数，制造刻意的粗糙 Low-poly Y2K 感
+            const tunnelPts = [];
+            for(let i=0; i<=steps; i++) {
+                const z = zStart + (zEnd - zStart) * (i/steps);
+                tunnelPts.push(getTrackPosition(z).pos);
+            }
+            const curve = new THREE.CatmullRomCurve3(tunnelPts);
+            // 半径极大的隧道，让人感觉在巨大的数据风暴中
+            const tunnelGeo = new THREE.TubeGeometry(curve, steps, 80, 8, false);
+            const tunnelMesh = new THREE.Mesh(tunnelGeo, tunnelMat);
+            scene.add(tunnelMesh);
+
+            activeSegments.push({
+                tunnel: tunnelMesh,
+                zStart: zStart,
+                zEnd: zEnd
+            });
+        }
+
+        // 初始化环境
+        for(let i=0; i<15; i++) generateSegment(-i*100, -(i+1)*100);
+
+        let cameraZ = 0;
+        // 极速狂飙 (速度翻倍，用纯粹的速度感制造疯狂)
+        const runSpeed = 800.0; 
+        const clock = new THREE.Clock();
+
+        // 模拟加载逻辑
+        let progress = 0;
+        let isLoaded = false;
+        const progressNum = document.getElementById('progress-number');
+        const barFill = document.getElementById('bar-fill');
+        const statusText = document.getElementById('status-text');
+        const enterBtn = document.getElementById('enter-btn');
+        const halo = document.getElementById('halo');
+
+        // 直白、工业化、极简的加载文案
+        const statusPhrases = [
+            "初始化渲染引擎...",
+            "读取场景网格数据...",
+            "解析高精度纹理...",
+            "预编译着色器...",
+            "构建物理碰撞体...",
+            "地图数据就绪"
+        ];
+
+        // 接收父页面真实加载进度 (postMessage)
+        let receivedRealProgress = false;
+        window.addEventListener('message', function(e) {
+            if (e.data && e.data.type === 'progress') {
+                receivedRealProgress = true;
+                var realProgress = e.data.value;
+                if (realProgress > progress) {
+                    progress = realProgress;
+                    progressNum.innerText = Math.floor(progress);
+                    barFill.style.width = progress + '%';
+
+                    const phaseIndex = Math.floor((progress / 100) * statusPhrases.length);
+                    if(phaseIndex < statusPhrases.length && statusText.innerText !== statusPhrases[phaseIndex]) {
+                        statusText.innerText = statusPhrases[phaseIndex];
+                    }
+
+                    if (progress >= 100 && !isLoaded) {
+                        completeLoading();
+                    }
+                }
+            }
+        });
+
+        // 原始加载函数 (作为 fallback: 如果3秒内没收到postMessage则启用模拟进度)
+        function updateLoading() {
+            if(isLoaded) return;
+            if(receivedRealProgress) return; // 已收到真实进度，不再模拟
+
+            progress += Math.random() * 2 + 0.1;
+            if(progress >= 100) progress = 100;
+
+            progressNum.innerText = Math.floor(progress);
+            barFill.style.width = `${progress}%`;
+
+            const phaseIndex = Math.floor((progress / 100) * statusPhrases.length);
+            if(phaseIndex < statusPhrases.length && statusText.innerText !== statusPhrases[phaseIndex]) {
+                statusText.innerText = statusPhrases[phaseIndex];
+            }
+
+            if(progress < 100) {
+                setTimeout(updateLoading, Math.random() * 150 + 20);
+            } else {
+                completeLoading();
+            }
+        }
+
+        function completeLoading() {
+            isLoaded = true;
+            statusText.innerText = "加载完成";
+            statusText.style.animation = "none";
+            halo.style.display = "none"; // 隐藏旋转光环
+            
+            enterBtn.style.display = "block";
+            // 达到 100% 时只增加水波纹畸变，不闪烁
+            acidPass.uniforms.intensity.value = 3.0;
+            setTimeout(() => { acidPass.uniforms.intensity.value = 1.0; }, 400);
+        }
+
+        enterBtn.addEventListener('click', () => {
+            // 立即锁定父页面鼠标（用户激活此刻有效）
+            try { window.parent.document.body.requestPointerLock(); } catch(e) {}
+
+            // 点击后，UI 消失，摄像机速度暴增，极度致幻
+            document.getElementById('hud').style.display = 'none';
+            var noiseEl = document.querySelector('.noise-overlay');
+            if (noiseEl) noiseEl.style.display = 'none';
+            
+            let diveSpeedMultiplier = 1.0;
+            const diveInterval = setInterval(() => {
+                diveSpeedMultiplier += 0.2;
+                acidPass.uniforms.intensity.value += 0.5; // 扭曲度狂飙
+                camera.fov += 1.0; // 视界极度拉伸
+                
+                if(diveSpeedMultiplier > 10.0) {
+                    clearInterval(diveInterval);
+                    // 通知父页面：加载过场结束，进入游戏
+                    if (window.parent && window.parent.onLoadingComplete) {
+                        window.parent.onLoadingComplete();
+                    }
+                }
+            }, 16);
+
+            // 修改主循环中的速度
+            window.activeSpeedMultiplier = () => diveSpeedMultiplier;
+        });
+
+        // 获取动态速度乘数
+        window.activeSpeedMultiplier = () => 1.0;
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            composer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            const dt = Math.min(clock.getDelta(), 0.1);
+            const time = clock.getElapsedTime();
+            
+            acidPass.uniforms.time.value = time;
+
+            // 摄像机极速推进
+            const currentSpeed = runSpeed * window.activeSpeedMultiplier();
+            cameraZ -= currentSpeed * dt;
+
+            // 动态隧道无限生成与销毁
+            const activeLimit = camera.position.z - 800;
+            const lastSeg = activeSegments[activeSegments.length-1];
+            if(lastSeg.zEnd > activeLimit) {
+                generateSegment(lastSeg.zEnd, lastSeg.zEnd - 100);
+            }
+            if(activeSegments.length > 20) {
+                const oldSeg = activeSegments.shift();
+                scene.remove(oldSeg.tunnel);
+            }
+
+            // 贴图动画：墙壁上的抽象符印疯狂流逝 (流速增加)
+            sigilTex.offset.y -= 3.0 * dt; 
+
+            // 摄像机沿轨道移动并剧烈摇晃
+            const baseData = getTrackPosition(cameraZ);
+            const aheadData = getTrackPosition(cameraZ - 50);
+
+            // 赋予摄像机一种"失控的过山车"感
+            const shakeX = Math.sin(time * 25) * 2.0;
+            const shakeY = Math.cos(time * 30) * 2.0;
+
+            camera.position.x = baseData.pos.x + shakeX;
+            camera.position.y = baseData.pos.y + shakeY;
+            camera.position.z = cameraZ;
+            
+            // 视角看向远方，并加入极度剧烈的 Banking (倾斜滚转)
+            camera.lookAt(aheadData.pos.x, aheadData.pos.y, aheadData.pos.z);
+            const banking = (aheadData.pos.x - baseData.pos.x) * -0.05; // 倾斜幅度加大
+            camera.rotation.z += banking + Math.sin(time * 15) * 0.2; // 增加疯狂的自发抖动
+
+            // 随轨道弯曲动态改变视场(FOV)，产生失重抽离感
+            const curveIntensity = Math.abs(aheadData.pos.x - baseData.pos.x) + Math.abs(aheadData.pos.y - baseData.pos.y);
+            camera.fov = THREE.MathUtils.lerp(camera.fov, 100 + curveIntensity * 0.5, 5 * dt);
+
+            camera.updateProjectionMatrix();
+            composer.render();
+        }
+
+        // 延迟启动: 3秒后如果没收到真实进度则用模拟进度
+        setTimeout(function() {
+            if (!receivedRealProgress && !isLoaded) {
+                updateLoading();
+            }
+        }, 3000);
+        animate();
+
+    </script>
+</body>
+</html>

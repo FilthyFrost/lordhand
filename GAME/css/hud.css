@@ -1,0 +1,169 @@
+/**
+ * HUD.CSS — 战斗界面HUD样式
+ *
+ * 包含: 血量条, 波次计数, 高度显示, 准星, 针数资源
+ */
+
+/* === HUD容器 === */
+#hud-screen {
+    pointer-events: none;
+}
+
+/* === 准星 === */
+.hud-crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: difference;
+    opacity: 0.5;
+}
+
+.hud-crosshair-h {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+.hud-crosshair-v {
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: #fff;
+}
+
+/* === 左上: 暂停按钮 + 波次 === */
+.hud-top-left {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.hud-pause-btn {
+    font-size: 2rem;
+    color: #000;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.hud-wave {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    color: #000;
+    mix-blend-mode: overlay;
+    opacity: 0.8;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+/* === 右上: 高度 === */
+.hud-top-right {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hud-height {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    color: #000;
+    mix-blend-mode: overlay;
+    opacity: 0.8;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.hud-height-bar {
+    width: 16rem;
+    height: 2px;
+    background: #000;
+    margin-top: 0.5rem;
+    filter: url(#liquidMetal);
+}
+
+/* === 左下: 血量条 === */
+.hud-bottom-left {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+    width: 20rem;
+}
+
+.hud-health-label {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.hud-health-container {
+    height: 2rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    padding: 2px;
+    clip-path: polygon(0 0, 100% 20%, 95% 100%, 5% 80%);
+    filter: drop-shadow(0 0 10px red);
+}
+
+.hud-health-fill {
+    width: 100%;
+    height: 100%;
+    background: #cc0000;
+    filter: contrast(150%);
+    transition: width 0.1s;
+}
+
+/* === 右下: 针数资源 === */
+.hud-bottom-right {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.hud-needles-label {
+    font-size: 1rem;
+    color: #000;
+    opacity: 0.7;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+}
+
+.hud-needles {
+    display: flex;
+    gap: 4px;
+}
+
+.hud-needle {
+    width: 4px;
+    height: 24px;
+    background: #8800ff;
+    border-radius: 2px;
+    transition: opacity 0.2s, transform 0.2s;
+    box-shadow: 0 0 6px #8800ff;
+}
+
+.hud-needle.empty {
+    opacity: 0.2;
+    transform: scaleY(0.6);
+    box-shadow: none;
+}
